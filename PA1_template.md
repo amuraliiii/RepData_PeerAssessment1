@@ -7,6 +7,11 @@ output:
     keep_md: true
 ---
 
+##global options
+
+```r
+knitr::opts_chunk$set( fig.path='figure/')
+```
 
 ## Introduction
 It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, Nike Fuelband, or Jawbone Up. These type of devices are part of the "quantified self" movement -- a group of enthusiasts who take measurements about themselves regularly to improve their health, to find patterns in their behavior, or because they are tech geeks. But these data remain under-utilized both because the raw data are hard to obtain and there is a lack of statistical methods and software for processing and interpreting the data.
@@ -77,7 +82,7 @@ head(TotalSteps, 10)
 hist(TotalSteps, xlab = "Number of Steps", main = "Histogram: Steps per Day", col = "Lightblue")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-4-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -104,7 +109,7 @@ plot(as.numeric(names(IntervalDataset)),
      type = "l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](figure/unnamed-chunk-6-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -158,7 +163,7 @@ StepsPerDayImputed <- tapply(activityDatasetImputed$steps, activityDatasetImpute
 hist(StepsPerDayImputed, xlab = "Number of Steps",col="Lightblue", main = "Histogram: Steps per Day (Imputed data)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](figure/unnamed-chunk-11-1.png)<!-- -->
 
 ```r
 MeanPerDayImputed <- mean(StepsPerDayImputed, na.rm = TRUE)
@@ -234,4 +239,4 @@ plot(as.numeric(names(StepsPerIntervalWeekend)),
      type = "l")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](figure/unnamed-chunk-13-1.png)<!-- -->
