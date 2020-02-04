@@ -8,7 +8,7 @@ output:
 ---
 
 ##global options
-```{r global_options, echo=TRUE}
+```{r}
 knitr::opts_chunk$set( fig.path='figure/')
 ```
 

@@ -82,7 +82,7 @@ head(TotalSteps, 10)
 hist(TotalSteps, xlab = "Number of Steps", main = "Histogram: Steps per Day", col = "Lightblue")
 ```
 
-![](figure/unnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-5-1.png)<!-- -->
 
 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -109,7 +109,7 @@ plot(as.numeric(names(IntervalDataset)),
      type = "l")
 ```
 
-![](figure/unnamed-chunk-6-1.png)<!-- -->
+![](figure/unnamed-chunk-7-1.png)<!-- -->
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -163,7 +163,7 @@ StepsPerDayImputed <- tapply(activityDatasetImputed$steps, activityDatasetImpute
 hist(StepsPerDayImputed, xlab = "Number of Steps",col="Lightblue", main = "Histogram: Steps per Day (Imputed data)")
 ```
 
-![](figure/unnamed-chunk-11-1.png)<!-- -->
+![](figure/unnamed-chunk-12-1.png)<!-- -->
 
 ```r
 MeanPerDayImputed <- mean(StepsPerDayImputed, na.rm = TRUE)
@@ -239,4 +239,4 @@ plot(as.numeric(names(StepsPerIntervalWeekend)),
      type = "l")
 ```
 
-![](figure/unnamed-chunk-13-1.png)<!-- -->
+![](figure/unnamed-chunk-14-1.png)<!-- -->
