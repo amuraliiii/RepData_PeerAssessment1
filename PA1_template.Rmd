@@ -5,6 +5,7 @@ date: "2/3/2020"
 output: 
   html_document:
     keep_md: true
+    self_contained: true
 ---
 
 ##global options
